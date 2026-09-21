@@ -19,9 +19,9 @@ The following tools must be installed on your host machine (Linux assumed):
 | **PyOCD** | 0.45+ | On-board debugger / flash runner |
 | **West** | 1.5.0 | Zephyr meta-tool for multi-repo management |
 
-> **Note:** On the current system the Zephyr SDK is installed at
-> `/opt/zephyr-sdk-1.0.1` and the Python virtual environment is at
-> `.venv`. Activate it before proceeding:
+> **Note:** The Zephyr SDK is typically installed at `/opt/zephyr-sdk-1.0.1`
+> (or wherever you installed it) and the Python virtual environment is at
+> the workspace root in `.venv`. Activate it before proceeding:
 
 ```bash
 source .venv/bin/activate
