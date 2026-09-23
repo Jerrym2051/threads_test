@@ -46,6 +46,9 @@ threads_test/
 - **[IPC (Inter-Process Communication)](./docs/ipc.md)** — Semaphores, mutexes,
   FIFO queues, message queues, pipes, and memory slabs for inter-thread
   coordination.
+- **[CAN Bus](./docs/can.md)** — Setting up and testing CAN communication on the
+  Nucleo-F303K8, including loopback mode, external transceiver wiring, and
+  troubleshooting ISO-TP errors.
 
 ## Cloning
 
