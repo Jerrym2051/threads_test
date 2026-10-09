@@ -11,7 +11,7 @@ communication (IPC)** patterns on STM32 Nucleo boards. Built and tested on the
 source .venv/bin/activate
 
 # Build for nucleo_f303k8
-west build -b nucleo_f303k8 --spec threads_test/
+west build -b nucleo_f303k8 -p -d threads_test/
 
 # Flash the board
 west flash
