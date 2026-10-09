@@ -139,7 +139,7 @@ The board is specified with the `-b` (or `--board`) flag. This project was
 developed and tested on the **STM32 Nucleo F303K8**:
 
 ```bash
-west build -b nucleo_f303k8 --spec threads_test/
+west build -b nucleo_f303k8 -p -s threads_test/
 ```
 
 > `--spec threads_test/` tells West to use the application directory
