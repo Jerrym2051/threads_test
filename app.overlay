@@ -1,0 +1,24 @@
+/*
+ * Enable CAN1 (bxCAN) on the Nucleo-F303K8 for the loopback demo.
+ *
+ * The board DTS (boards/st/nucleo_f303k8/nucleo_f303k8.dts) does not
+ * enable CAN, so the application does it here:
+ *  - can1 lives in dts/arm/st/f3/stm32f3.dtsi (status "disabled"),
+ *  - pins come from the hal_stm32 pinctrl dtsi:
+ *    can_rx_pa11 (PA11 AF9, with bias-pull-up) / can_tx_pa12 (PA12 AF9),
+ *  - "zephyr,canbus" chosen lets the app grab the device with
+ *    DEVICE_DT_GET(DT_CHOSEN(zephyr_canbus)).
+ */
+
+/ {
+	chosen {
+		zephyr,canbus = &can1;
+	};
+};
+
+&can1 {
+	pinctrl-0 = <&can_rx_pa11 &can_tx_pa12>;
+	pinctrl-names = "default";
+	bitrate = <500000>;
+	status = "okay";
+};
